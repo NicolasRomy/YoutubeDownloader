@@ -14,8 +14,8 @@ print("Length of video: ",yt.length,"seconds")
 print("Ratings: ",yt.rating)
 #printing all the available streams
 print(yt.streams.filter(progressive=True))
-
-ys = yt.streams.get_highest_resolution()
+print("please choose your quality by entering the itag number")
+ys = yt.streams.get_by_itag(input())
 
 #Starting download
 print("telechargement en cours")
